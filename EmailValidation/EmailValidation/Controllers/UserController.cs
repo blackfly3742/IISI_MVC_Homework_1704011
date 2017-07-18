@@ -9,7 +9,6 @@ namespace EmailValidation.Controllers
 {
     public class UserController : Controller
     {
-        // GET: User
         public ActionResult Login()
         {
             return View();
@@ -20,6 +19,10 @@ namespace EmailValidation.Controllers
             if (pageData.Account == "mike@mail.com" && pageData.Password == "tree")
             {
                 pageData.Message = $"您使用{pageData.Account}登入成功。";
+            }
+            else
+            {
+                pageData.Message = $"您輸入的帳號或密碼不正確。";
             }
             return View(pageData);
         }

@@ -8,9 +8,9 @@ namespace EmailValidation.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        public ActionResult Index(string msg)
         {
-            return View();
+            return View(msg);
         }
 
         public ActionResult About()
